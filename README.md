@@ -1,6 +1,6 @@
 ## About
 
-This is a template where swagger. yaml is pushed to GitHub and then a Swagger server is deployed to GAE through CircleCI.
+This is a template where swagger.yaml is pushed to GitHub and then a Swagger server is deployed to GAE through CircleCI.
 
 ## Usage
 
