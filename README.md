@@ -1,6 +1,6 @@
 ## About
 
-Template to be deployed to Google App Engine via CircleCI when swagger.yaml is pushed.
+This is a template where push swagger.yaml will deploy a Swagger server to Google App Engine through CircleCI.
 
 ## Usage
 
