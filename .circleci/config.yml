@@ -1,0 +1,15 @@
+version: 2.1
+
+orbs:
+  gcp-cli: circleci/gcp-cli@1.5.0
+
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run: mkdir swagger
+      - run: docker run --rm -v ${PWD}:/local swaggerapi/swagger-codegen-cli generate -i /local/swagger.yaml -l nodejs-server -o /local/swagger
+      - gcp-cli/initialize
+      - run: cp ./app.yaml swagger/app.yaml
+      - run: gcloud app deploy swagger/app.yaml --no-promote --version=1
